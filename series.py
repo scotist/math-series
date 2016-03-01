@@ -21,11 +21,11 @@ def lucas(m):
         return lucas(m - 1) + lucas(m - 2)
 
 
-def sum_series(p, x=0, y=1):
+def sum_series(case, x=0, y=1):
     """Return nth value in some random series."""
-    if p == 1:
+    if case == 0:
         return x
-    elif p == 2:
+    elif case == 1:
         return y
     else:
-        return sum_series(p - 1) + sum_series(p - 2)
+        return sum_series(case - 1, x, y) + sum_series(case - 2, x, y)

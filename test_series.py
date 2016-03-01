@@ -21,15 +21,15 @@ def test_fibonacci(n, result):
     assert fibonacci(n) == result
 
 
-@pytest.mark.parametrize('m, results', [(1, 2), (2, 1), (3, 3)])
-def test_lucas(m, results):
+@pytest.mark.parametrize('m, result', [(1, 2), (2, 1), (3, 3)])
+def test_lucas(m, result):
     """Test lucas function."""
     from series import lucas
-    assert lucas(m) == results
+    assert lucas(m) == result
 
 
 # @pytest.mark.parametrize('p, x, y', [(, x, y), ()])
 def test_sum_series():
     """Test lucas function."""
     from series import sum_series
-    assert sum_series(1) == 0
+    assert sum_series(4, 3, 7) == 27
