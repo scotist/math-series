@@ -2,18 +2,6 @@
 import pytest
 
 
-def test_fibonacci_1():
-    """Test fibonacci function."""
-    from series import fibonacci
-    assert fibonacci(1) == 0
-
-
-def test_fibonacci_2():
-    """Test fibonacci function."""
-    from series import fibonacci
-    assert fibonacci(2) == 1
-
-
 @pytest.mark.parametrize('n, result', [(1, 0), (2, 1), (3, 1)])
 def test_fibonacci(n, result):
     """Test fibonacci function."""
@@ -28,8 +16,8 @@ def test_lucas(m, result):
     assert lucas(m) == result
 
 
-# @pytest.mark.parametrize('p, x, y', [(, x, y), ()])
-def test_sum_series():
-    """Test lucas function."""
+@pytest.mark.parametrize('case, x, y, result', [(4, 3, 7, 27), (5, 4, 6, 42)])
+def test_sum_series(case, x, y, result):
+    """Test the sum of a series given it's 1st and 2nd cases."""
     from series import sum_series
-    assert sum_series(4, 3, 7) == 27
+    assert sum_series(case, x, y) == result
