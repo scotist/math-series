@@ -32,26 +32,18 @@ def sum_series(case, x=0, y=1):
 
 
 if __name__ == "__main__":
-    print(u"""
-        This module defines functions that implement mathematical series.
-        ...
-
-        fibonacci(n):
-            Returns the nth value in the fibonacci series
-
-        >>> fibonacci(2)
-        1
-
-        lucas(n):
-            Returns the nth value in the lucas series
-
-        >>> lucas(5)
-        7
-
-        sum_series(case, x, y):
-            Returns the nth value in an arbitrary series
-
-        >>> sum_series(4, 3, 7)
-        27
-
-           """)
+    print(u""" This module defines functions that implement
+        mathematical series.""")
+    print(u"")
+    print(u"")
+    print(u"fibonacci(n):")
+    print(fibonacci.__doc__)
+    print(u"fibonacci(11) returns %s" % fibonacci(11))
+    print(u"")
+    print(u"lucas(n):")
+    print(lucas.__doc__)
+    print(u"lucas(17) returns %s" % lucas(17))
+    print(u"")
+    print(u"sum_series(n):")
+    print(sum_series.__doc__)
+    print(u"sum_series(9, x=7, y=21) returns %s" % sum_series(9, x=7, y=21))
